@@ -15,5 +15,3 @@ with open(sys.argv[1],'r') as f:
 #    coord_second=float(line_second[1])**2+float(line_second[2])**2+float(line_second[3])**2
     print('Distance between the atoms: {:.3f}'.format(rms))
     
-else:
-    print("none")
