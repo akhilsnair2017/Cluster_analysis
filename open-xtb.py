@@ -6,12 +6,12 @@ import itertools
 path="./"
 dst_path="./analysis"
 for dir in os.listdir(path):
-        if os.path.isdir(dir):
-                dir_path=os.path.join(path,dir)
-                for file in os.listdir(dir_path):
-                        if file=='xtbopt.xyz':
-                                file_path=os.path.join(dir_path,file)
-                                shutil.copy(file_path,os.path.join(dst_path,dir+'.xyz'))
+    if os.path.isdir(dir):
+        dir_path=os.path.join(path,dir)
+            for file in os.listdir(dir_path):
+                if file=='xtbopt.xyz':
+                    file_path=os.path.join(dir_path,file)
+                        shutil.copy(file_path,os.path.join(dst_path,dir+'.xyz'))
 os.chdir(dst_path)
 print(os.getcwd())
 def read_energy_from_xyz_file(xyz_file):
