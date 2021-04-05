@@ -1,0 +1,17 @@
+import os
+path="./"
+with open('clustering.log','r') as f:
+    f=f.readlines()
+out_list=[]
+file_list=[]
+for line in f[1:len(f)]:
+    line=line.split()
+    if len(line)>1 and len(line)<3:
+        out_list.append(line[1]+'.xyz')
+#print(file_list)
+for file in os.listdir():
+    if file.endswith("xyz"):
+        file_list.append(file)
+print(out_list)
+for cluster in out_list:
+    os.remove(os.path.join(path,cluster))
