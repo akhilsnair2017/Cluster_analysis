@@ -1,0 +1,16 @@
+import shutil,os
+import numpy as np
+import sys
+path="./"
+file_list=[]
+for file in os.listdir():
+    if file.endswith("xyz"):
+        file_list.append(file)
+dir_list=[]
+for i in range(0,len(file_list)):
+    dir_list.append(i)
+for file in file_list:
+    for dir in dir_list:
+        if file_list.index(file)==dir_list.index(dir):
+            os.mkdir(os.path.join(path,str(dir)))
+            shutil.move(os.path.join(path,file),os.path.join(path,str(dir)))
