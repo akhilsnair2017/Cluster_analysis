@@ -1,3 +1,4 @@
+#script for comparing the structures based on their energies. The removal portion of the code owes courtesy to Dr. Surjit Nandi
 import shutil,os
 import numpy as np
 import pandas as pd
